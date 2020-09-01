@@ -3,14 +3,14 @@
     <h2 class=" pb-4 text-center">パスワードを<br>忘れましたか？</h2>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render "shared/error_messages", resource: resource %>
 
       <div class="form-group pb-2">
-        <%= f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, placeholder: "Eメール", class: "form-control" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "メールで送る", class: "btn btn-primary" %>
+        <%= f.submit "上記に送る", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
