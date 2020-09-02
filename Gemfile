@@ -62,3 +62,6 @@ gem 'jquery-rails'
 gem "toastr-rails"
 
 gem 'rails-i18n'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
