@@ -4,4 +4,3 @@
 //= require rails-ujs
 //= require activestorage
 //= require toastr
-//= require_tree .

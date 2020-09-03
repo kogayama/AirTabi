@@ -10,7 +10,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.email_field :email, autocomplete: "email", placeholder: "Eメール", class: "form-control" %>
+        <%= f.email_field :email, autocomplete: "email", placeholder: "メールアドレス", class: "form-control" %>
       </div>
 
       <div class="form-group pb-2">
@@ -18,8 +18,11 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "新規登録", class: "btn btn-primary" %>
+        <%= f.submit "新規登録", class: "btn btn-sign-up btn-block" %>
       </div>
     <% end %>
+
+    <hr>
+    <%= link_to "Facebookで新規登録", user_facebook_omniauth_authorize_path, class: "btn btn-facebook btn-block" %>
   </div>
 </div>
