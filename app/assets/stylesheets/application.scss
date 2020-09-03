@@ -1,3 +1,90 @@
 @import "bootstrap";
-@import "toastr"
+@import "toastr";
 
+
+body{
+  color: #565a5c;
+  background-color: #f8f8f8; 
+  font-family: 'M PLUS Rounded 1c', 'Overpass', sans-serif;
+}
+
+a {
+  color: #00A699;
+}
+
+.container {
+  width: 80%;
+}
+
+.text-red, .icon-red {
+  color: #FF5A5F;
+}
+
+// NAVBARS
+.navbar-light {
+  background-color: #FFFFFF;
+}
+
+.navbar-light .navbar-brand {
+  color: #FF5A5F;
+  font-size: 4em;
+  font-weight: 400;
+  font-family: 'Lobster'
+}
+
+// BUTTONS
+.btn-block {
+  display: block;
+  white-space: normal;
+  width: 100%;
+}
+
+
+.btn{
+  width: 100%;
+  border-color: #c4c4c4;
+  background: white;
+  color:#fff;
+  border-radius: 100vh;
+  padding: 10px 0;
+  margin-top: 10px;
+  
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.btn.btn-sign-up {
+  border: 1px solid #ff5a5f;
+  background-color: #ff5a5f;
+}
+
+.btn.btn-sign-up:active {
+  outline: none;
+  border-color: #e00007;
+  background-color: #e00007;
+}
+
+.btn.btn-login {
+  border: 1px solid #00A699;
+  background-color: #00A699;
+}
+
+.btn.btn-login:active {
+  outline: none;
+  border-color: #066165;
+  background-color: #066165;
+}
+
+.btn.btn-facebook {
+  border: 1px solid #3B5998;
+  background-color: #3B5998;
+}
+
+.btn.btn-facebook:active {
+  outline: none;
+  border-color: #2d467b;
+  background-color: #2d467b;
+}
