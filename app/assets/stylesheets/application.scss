@@ -20,6 +20,26 @@ a {
   color: #FF5A5F;
 }
 
+.avatar_small {
+  width: 30px;
+  height: 30px;
+}
+
+.avatar_medium {
+  width: 50px;
+  height: 50px;
+}
+
+.avatar_large {
+  width: 70px;
+  height: 70px;
+}
+
+.avatar_full {
+  width: 100px;
+  height: 100px;
+}
+
 // NAVBARS
 .navbar-light {
   background-color: #FFFFFF;
@@ -31,6 +51,12 @@ a {
   font-weight: 400;
   font-family: 'Lobster'
 }
+
+.nav-user-info {
+  display: flex;
+  align-items: center;
+}
+
 
 // BUTTONS
 .btn-block {
@@ -88,3 +114,4 @@ a {
   border-color: #2d467b;
   background-color: #2d467b;
 }
+
