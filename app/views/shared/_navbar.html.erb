@@ -14,8 +14,14 @@
             <%= link_to('新規登録', new_user_registration_path, class: "nav-link") %>
           </li>
         <% else %>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown nav-user-info">
+            <a href=""></a>
+            <% if current_user.image? %>
+              <%= image_tag user_image_url(current_user), class: "rounded-circle avatar_small" %>
+            <% else %>
+              <%= image_tag "no-image.png", class: "rounded-circle avatar_small" %>
+            <% end%>
+            <a class="nav-link dropdown-toggle user-info" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= current_user.fullname %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
