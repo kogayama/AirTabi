@@ -1,5 +1,10 @@
 module ApplicationHelper
   def user_image_url(user)
-    "http://graph.facebook.com/#{user.uid}/picture?type=large"
+    if user.image
+      "http://graph.facebook.com/#{user.uid}/picture?type=large"
+    else
+      "no-image.png"
+    end
   end
 end
+
