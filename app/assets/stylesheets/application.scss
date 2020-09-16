@@ -12,6 +12,10 @@ a {
   color: #00A699;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .container {
   width: 80%;
 }
@@ -20,6 +24,11 @@ a {
   color: #FF5A5F;
 }
 
+.form-control::placeholder {
+  opacity: 0.4;
+}
+
+//AVATAR-IMAGE
 .avatar_small {
   width: 30px;
   height: 30px;
@@ -36,8 +45,8 @@ a {
 }
 
 .avatar_full {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 // NAVBARS
@@ -47,7 +56,7 @@ a {
 
 .navbar-light .navbar-brand {
   color: #FF5A5F;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 400;
   font-family: 'Lobster'
 }
