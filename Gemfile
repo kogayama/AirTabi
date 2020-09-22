@@ -67,3 +67,5 @@ gem 'rails-i18n'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+gem 'pry-rails'
