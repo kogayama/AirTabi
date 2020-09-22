@@ -13,7 +13,7 @@
           <%= form_with model: @room do |f| %>
             <div class="row">
               <div class="form-group">
-                <%= f.text_field :address, placeholder: "住所を入力してください。", class: "form-control" %>
+                <%= f.text_field :address, placeholder: "住所を入力してください。", class: "form-control", required: true %>
               </div>
             </div>
             <div class="text-center">

@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
   def create
     @room = current_user.rooms.build(room_params)
     if @room.save
-      redirect_to listing_room_path(@room), notice: "保存..."
+      redirect_to listing_room_path(@room), notice: "保存しました"
     else
       flash[:alert] = "間違いがあります"
       render :new
@@ -21,6 +21,15 @@ class RoomsController < ApplicationController
   end
 
   def show
+  end
+
+  def update
+    if @room.update(room_params)
+      flash[:notice] = "保存しました"
+    else
+      flash[:alert] = "間違いがあります"
+    end
+    redirect_back(fallback_location: request.referer)
   end
 
   def listing

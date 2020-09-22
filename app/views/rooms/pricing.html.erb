@@ -12,8 +12,8 @@
         <div class="container">
           <%= form_with model: @room do |f| %>
               <div class="row">
-              <div class="form-group">
-                <%= f.text_field :price, placeholder: "例）12000円", class: "form-control" %>
+              <div class="form-group max-width">
+                <%= f.text_field :price, placeholder: "例）12000", class: "form-control", required: true %>
               </div>
             </div>
             <div class="text-center">

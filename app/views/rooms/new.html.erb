@@ -7,7 +7,7 @@
       <%= form_for @room do |f| %>
         <div class="row">
 
-          <div class="col-md-4">
+          <div class="col-md-4 select">
             <div class="form-group">
               <label>建物のタイプ</label>
               <%= f.select :home_type, [["アパート", "Apartment"], ["住宅", "House"], ["ホテル", "Bed & Breakfast"]],
@@ -15,7 +15,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 select">
             <div class="form-group">
               <label>部屋のタイプ</label>
               <%= f.select :room_type, [["まるまる貸し切り", "Entire"], ["個室", "Private"], ["シェアルーム", "Shared"]],
@@ -23,7 +23,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 select">
             <div class="form-group">
               <label>宿泊可能な人数</label>
               <%= f.select :accommodate, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 select">
             <div class="form-group">
               <label>ベッドの数</label>
               <%= f.select :bed_room, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 select">
             <div class="form-group">
               <label>バスルームの数</label>
               <%= f.select :bath_room, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
@@ -47,8 +47,9 @@
             </div>
           </div>
         </div>
-
-        <%= f.submit "保存", class: "btn btn-primary"%>
+        <div class="text-center">
+          <%= f.submit "保存", class: "btn btn-form"%>
+        </div>
       <% end %>
     </div>
   </div>

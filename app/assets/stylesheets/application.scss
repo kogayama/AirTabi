@@ -135,8 +135,13 @@ a:hover {
 }
 
 // FORM
+.max-width {
+  width: 100%;
+}
+
 .form-group {
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .form-control {
