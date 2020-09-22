@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-md-3">
+    <%= render "room_menu" %>
+  </div>
+
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header">
+        基本情報
+      </div>
+      <div class="card-body">
+        <div class="container max-width">
+          <%= form_with model: @room do |f| %>
+            <div class="row">
+
+              <div class="col-md-4 select">
+                <div class="form-group">
+                  <label>建物のタイプ</label>
+                  <%= f.select :home_type, [["アパート", "Apartment"], ["住宅", "House"], ["ホテル", "Bed & Breakfast"]],
+                                id: "home_type", prompt: "選択してください", class: "form-control" %>
+                </div>
+              </div>
+
+              <div class="col-md-4 select">
+                <div class="form-group">
+                  <label>部屋のタイプ</label>
+                  <%= f.select :room_type, [["まるまる貸し切り", "Entire"], ["個室", "Private"], ["シェアルーム", "Shared"]],
+                                id: "room_type", prompt: "選択してください", class: "form-control" %>
+                </div>
+              </div>
+
+              <div class="col-md-4 select">
+                <div class="form-group">
+                  <label>宿泊可能な人数</label><br>
+                  <%= f.select :accommodate, [["1人", 1], ["2人", 2], ["3人", 3], ["4人以上", 4]],
+                                id: "accommodate", prompt: "選択してください", class: "form-control" %>
+                </div>
+              </div>
+
+              <div class="col-md-4 select">
+                <div class="form-group">
+                  <label>ベッドの数</label><br>
+                  <%= f.select :bed_room, [["1つ", 1], ["2つ", 2], ["3つ", 3], ["4つ以上", 4]],
+                                id: "bed_room", prompt: "選択してください", class: "form-control" %>
+                </div>
+              </div>
+
+              <div class="col-md-4 select">
+                <div class="form-group">
+                  <label>バスルームの数</label><br>
+                  <%= f.select :accommodate, [["1つ", 1], ["2つ", 2], ["3つ", 3], ["4つ以上", 4]],
+                                id: "bath_room", prompt: "選択してください", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <%= f.submit "保存", class: "btn btn-form"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

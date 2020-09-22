@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-3">
+    <%= render "room_menu" %>
+  </div>
+
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header">
+        説明
+      </div>
+      <div class="card-body">
+        <div class="container">
+          <%= form_with model: @room do |f| %>
+            <div class="row">
+              <div class="form-group">
+                <label>部屋のタイトル</label>
+                <%= f.text_field :listing_name, placeholder: "タイトルを記入してください。", class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label>概要</label>
+                <%= f.text_area :summary, rows: 5, placeholder: "概要を記入してください。", class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <%= f.submit "保存", class: "btn btn-form" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
