@@ -78,17 +78,12 @@ a:hover {
 .btn{
   width: 100%;
   border-color: #c4c4c4;
-  background: white;
   color:#fff;
   border-radius: 100vh;
   padding: 10px 0;
   margin-top: 10px;
 }
 
-.btn:hover, .btn:focus {
-  color: #fff;
-  transform: scale(1.1);
-}
 
 .btn.btn-sign-up {
   border: 1px solid #ff5a5f;

@@ -26,7 +26,7 @@
           <div class="col-md-4 select">
             <div class="form-group">
               <label>宿泊可能な人数</label>
-              <%= f.select :accommodate, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
+              <%= f.select :accommodate, [["1", 1], ["2", 2], ["3", 3], ["4+", 4]],
                             id: "accommodate", prompt: "選択してください", class: "form-control" %>
             </div>
           </div>
@@ -34,7 +34,7 @@
           <div class="col-md-4 select">
             <div class="form-group">
               <label>ベッドの数</label>
-              <%= f.select :bed_room, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
+              <%= f.select :bed_room, [["1", 1], ["2", 2], ["3", 3], ["4+", 4]],
                             id: "bed_room", prompt: "選択してください", class: "form-control" %>
             </div>
           </div>
@@ -42,7 +42,7 @@
           <div class="col-md-4 select">
             <div class="form-group">
               <label>バスルームの数</label>
-              <%= f.select :bath_room, [["1", 1], ["2", 1], ["3", 1], ["4+", 4]],
+              <%= f.select :bath_room, [["1", 1], ["2", 2], ["3", 3], ["4+", 4]],
                             id: "bath_room", prompt: "選択してください", class: "form-control" %>
             </div>
           </div>
