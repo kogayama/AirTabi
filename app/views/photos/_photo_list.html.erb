@@ -1,0 +1,8 @@
+<% if @photos.count %>
+
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <%= image_tag photo.image.url() %>
+    <% end %>
+  </div>
+<% end %>
