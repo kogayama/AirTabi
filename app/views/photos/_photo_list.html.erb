@@ -2,7 +2,7 @@
 
   <div class="row">
     <% @photos.each do |photo| %>
-      <%= image_tag photo.image.url() %>
+      <%= image_tag photo.image.url(), class: "PhotoUpload-img" %>
     <% end %>
   </div>
 <% end %>
