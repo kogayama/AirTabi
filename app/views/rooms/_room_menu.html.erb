@@ -1,29 +1,41 @@
 <div class="list-group">
   
-  <div class="list-group-item">
-    <%= link_to "基本情報", listing_room_path, class: "list-group-item-action"%>
+  <%= link_to listing_room_path, class: "list-group-item list-group-item-action" do %>
+    基本情報
     <span><i class="fas fa-check float-right"></i></span>
-  </div>
-  <div class="list-group-item">
-    <%= link_to "料金", pricing_room_path, class: "list-group-item-action" %>
-    <% if @room.price.blank?   %>
+  <% end %>
+
+  <%= link_to pricing_room_path, class: "list-group-item list-group-item-action" do %>
+    料金
+    <% if !(@room.price.blank?) %>
       <span><i class="fas fa-check float-right"></i></span>
-    <% end %>
-  </div>
-  <div class="list-group-item">
-    <%= link_to "説明", description_room_path, class: "list-group-item-action" %>
+    <% end %> 
+  <% end %>
+
+  <%= link_to description_room_path, class: "list-group-item list-group-item-action" do %>
+    説明
+    <% if !(@room.listing_name.blank?) %>
+      <span><i class="fas fa-check float-right"></i></span>
+    <% end %> 
+  <% end %>
+
+  <%= link_to photo_upload_room_path, class: "list-group-item list-group-item-action" do %>
+    写真
+    <% if !(@room.photos.blank?) %>
+      <span><i class="fas fa-check float-right"></i></span>
+    <% end %> 
+  <% end %>
+
+  <%= link_to amenities_room_path, class: "list-group-item list-group-item-action" do %>
+    アメニティ・設備
     <span><i class="fas fa-check float-right"></i></span>
-  </div>
-  <div class="list-group-item">
-    <%= link_to "写真", photo_upload_room_path, class: "list-group-item-action" %>
-    <span><i class="fas fa-check float-right"></i></span>
-  </div>
-  <div class="list-group-item">
-    <%= link_to "アメニティ・設備", amenities_room_path, class: "list-group-item-action" %>
-    <span><i class="fas fa-check float-right"></i></span>
-  </div>
-  <div class="list-group-item">
-    <%= link_to "場所", location_room_path, class: "list-group-item-action" %>
-    <span><i class="fas fa-check float-right"></i></span>
-  </div>
+  <% end %>
+
+  <%= link_to location_room_path, class: "list-group-item list-group-item-action" do %>
+    場所
+    <% if !(@room.address.blank?) %>
+      <span><i class="fas fa-check float-right"></i></span>
+    <% end %> 
+  <% end %>
+
 </div>

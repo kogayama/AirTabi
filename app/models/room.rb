@@ -1,8 +1,6 @@
 class Room < ApplicationRecord
   belongs_to :user
   has_many :photos
-
-  mount_uploader :image, ImageUploader
   
   validates :home_type, presence: true
   validates :room_type, presence: true
@@ -10,6 +8,4 @@ class Room < ApplicationRecord
   validates :bed_room, presence: true
   validates :bath_room, presence: true
 
-  
-  
 end
