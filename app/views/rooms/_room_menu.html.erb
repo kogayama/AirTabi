@@ -39,3 +39,12 @@
   <% end %>
 
 </div>
+
+<% add_full = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
+
+
+<%= form_with(model: @room, local: true) do |f| %>
+  <%= f.hidden_field :active, value: true %>
+  <%= f.submit "保存", id: "publish_button", class: "btn btn-block", disabled: !add_full %>
+<% end %>
+
